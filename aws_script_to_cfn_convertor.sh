@@ -26,8 +26,10 @@ out="$(sed -i s/^/\"/g "$output_file")"
 
 out="$(sed -i s/$/\\\\\n\",/g "$output_file")"
 
-# remove comma from last line
+# escape any slash
 
+
+# remove comma from last line
 out="$(sed -i '$ s/,$//g' $output_file)"
 
 
